@@ -1,0 +1,22 @@
+body {
+
+    color: #4267B2;
+    /* background-color: #630330; */
+    background-color: #fff;
+}
+
+.jumbotron {
+    /* background-image: url("../images/nasa.jpg"); */
+    background-size: 100% 100%;
+    text-align: center;
+  }
+
+.wrapper {
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2px;
+    margin: 0 auto;
+    text-align: center;
+    /* grid-auto-rows: 100px; */
+}
