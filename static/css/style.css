@@ -13,10 +13,26 @@ body {
 
 .wrapper {
 
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    display: inline-block;
+    /* grid-template-columns: repeat(auto-fit, minmax(1px, 6fr)); */
+    /* grid-template-columns: repeat(auto-fit, 1fr 1fr 1fr); */
+    /* gap: 2px; */
     margin: 0 auto;
     text-align: center;
-    /* grid-auto-rows: 100px; */
+    /* grid-auto-columns: min-content; */
+    /* grid-auto-columns: max-content; */
+    grid-auto-columns: auto;
 }
+
+/* #grid {
+
+    height: 100px;
+    display: grid;
+    grid-template-areas: "a a";
+    gap: 10px;
+    grid-auto-columns: 200px;
+}
+
+#grid > div {
+    background-color: lime;
+} */
