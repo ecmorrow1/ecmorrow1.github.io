@@ -8,7 +8,7 @@ var data = [{
     imageURL: "",
 },
 {
-    name: "My Profile Page",
+    name: "Profile Page",
     projectURL: "https://github.com/ecmorrow1/ecmorrow1.github.io",
     description: "A JavaScript/HTML/CSS profile built to dynamically load links and explanations to all complete projects.",
     languages: "JavaScript | HTML | CSS",
