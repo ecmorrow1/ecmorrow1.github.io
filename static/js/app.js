@@ -1,37 +1,45 @@
-// Sort the data array using the greekSearchResults value
-data.sort(function(a, b) {
-  return parseFloat(b.greekSearchResults) - parseFloat(a.greekSearchResults);
-});
+// import the dictionary from data.js
+const projects = data;
+const parent = document.getElementById("projectList");
 
-// Slice the first 10 objects for plotting
-data = data.slice(0, 10);
+var newDiv;
+var anchor;
+var projectDescription;
+var projectlanguages;
+var projectTools;
+var projectLibraries;
 
-// Reverse the array due to Plotly's defaults
-data = data.reverse();
 
-// Trace1 for the Greek Data
-var trace1 = {
-  x: data.map(row => row.greekSearchResults),
-  y: data.map(row => row.greekName),
-  text: data.map(row => row.greekName),
-  name: "Greek",
-  type: "bar",
-  orientation: "h"
-};
+for (var i = 0; i < data.length; i++) {
+    //Create a new div for each element of data.js
+    newDiv = document.createElement("div");
+    newDiv.classList.add("col-md-12");
 
-// data
-var data = [trace1];
+    // Create the anchor element to be the header
+    anchor = document.createElement("a");
+    anchor.href = data[i].projectURL;
+    anchor.innerHTML = '<h3>'+data[i].name+'</h3>';
 
-// Apply the group bar mode to the layout
-var layout = {
-  title: "Greek gods search results",
-  margin: {
-    l: 100,
-    r: 100,
-    t: 100,
-    b: 100
-  }
-};
+    //Create the paragraph element to contain the description
+    projectDescription = document.createElement("p");
+    projectDescription.textContent = data[i].description;
 
-// Render the plot to the div tag with id "plot"
-Plotly.newPlot("plot", data, layout);
+    //Create the paragraph element to contain the list of languages utilized
+    projectlanguages = document.createElement("p")
+    projectlanguages.textContent = 'Languages Utilized: ' + data[i].languages;
+
+    //Create the paragraph element to contain the list of tools utilized
+    projectTools = document.createElement("p")
+    projectTools.textContent = 'Tools Utilized: ' + data[i].tools;
+
+    //Create the paragraph element to contain the list of libraries utilized
+    projectLibraries = document.createElement("p")
+    projectLibraries.textContent = 'Libraries Utilized: ' + data[i].libraries;
+
+    //Append all new elements to the new div
+    newDiv.append(anchor,projectDescription,projectlanguages,projectTools,projectLibraries);
+
+    //Append the new div to the wrapper
+    parent.appendChild(newDiv);
+}
+
