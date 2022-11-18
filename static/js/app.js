@@ -29,24 +29,24 @@ for (var i = 0; i < data.length; i++) {
         projectDescription = document.createElement("h6");
         projectDescription.textContent = data[i].description;
         
-        // Create the h7 element to contain the list of languages utilized
-        projectLanguages = document.createElement("h7");
+        // Create the paragraph element to contain the list of languages utilized
+        projectLanguages = document.createElement("p");
         if (data[i].languages) {
             projectLanguages.textContent = 'Languages Utilized: ' + data[i].languages;
         } else {
             projectLanguages.textContent = "";
         }
 
-        // Create the h7 element to contain the list of tools utilized
-        projectTools = document.createElement("h7");
+        // Create the paragraph element to contain the list of tools utilized
+        projectTools = document.createElement("p");
         if (data[i].tools) {
             projectTools.textContent = 'Tools Utilized: ' + data[i].tools;
         } else {
             projectTools.textContent = "";
         }
 
-        // Create the h7 element to contain the list of libraries utilized
-        projectLibraries = document.createElement("h7");
+        // Create the paragraph element to contain the list of libraries utilized
+        projectLibraries = document.createElement("p");
         if (data[i].libraries) {
             projectLibraries.textContent = 'Libraries Utilized: ' + data[i].libraries;
         } else {
