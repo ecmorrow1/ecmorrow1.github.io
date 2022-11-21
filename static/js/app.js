@@ -19,6 +19,8 @@ for (var i = 0; i < data.length; i++) {
         // Create a new div for each element of data.js
         newDiv = document.createElement("div");
         newDiv.classList.add("col-md-12");
+        newDiv.classList.add("col-sm-12");
+        newDiv.classList.add("col-xs-12");
 
         // Create the anchor element to be the header
         anchor = document.createElement("a");
