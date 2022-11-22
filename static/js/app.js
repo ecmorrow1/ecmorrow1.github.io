@@ -29,7 +29,7 @@ for (var i = 0; i < data.length; i++) {
         if (data[i].languages[0]) {
             anchor.innerHTML = anchor.innerHTML + 'Languages Utilized: <b>' + data[i].languages[0] + '</b>';
             for (var j=1;j<data[i].languages.length;j++) {
-                anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].languages[j] + '</b>';
+                anchor.innerHTML = anchor.innerHTML + '&nbsp| <b>' + data[i].languages[j] + '</b>';
             }
         }
         
@@ -37,7 +37,7 @@ for (var i = 0; i < data.length; i++) {
         if (data[i].tools[0]) {
             anchor.innerHTML = anchor.innerHTML + '<br>Tools Utilized: <b>' + data[i].tools[0] + '</b>';
             for (var j=1;j<data[i].tools.length;j++) {
-                anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].tools[j] + '</b>';
+                anchor.innerHTML = anchor.innerHTML + '&nbsp| <b>' + data[i].tools[j] + '</b>';
             }
         }
         
@@ -45,7 +45,7 @@ for (var i = 0; i < data.length; i++) {
         if (data[i].libraries[0]) {
             anchor.innerHTML = anchor.innerHTML + '<br>Libraries Utilized: <b>' + data[i].libraries[0] + '</b>';
             for (var j=1;j<data[i].libraries.length;j++) {
-                anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].libraries[j] + '</b>';
+                anchor.innerHTML = anchor.innerHTML + '&nbsp| <b>' + data[i].libraries[j] + '</b>';
             }
         }
 
