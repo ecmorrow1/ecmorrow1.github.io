@@ -1,7 +1,7 @@
 // Import the list of dictionaries from data.js
 const projects = data;
 // Grab the wrapper element from index.html
-const parent = document.getElementById("projectList");
+const parentWrapper = document.getElementById("projectList");
 
 var newDiv;
 var anchor;
@@ -29,37 +29,48 @@ for (var i = 0; i < data.length; i++) {
 
         // Create the h6 element to contain the description
         projectDescription = document.createElement("h6");
-        projectDescription.textContent = data[i].description;
+        projectDescription.innerHTML = data[i].description;
         
         // Create the paragraph element to contain the list of languages utilized
         projectLanguages = document.createElement("p");
-        if (data[i].languages) {
-            projectLanguages.textContent = 'Languages Utilized: ' + data[i].languages;
+        if (data[i].languages[0]) {
+            projectLanguages.innerHTML = 'Languages Utilized: <b>' + data[i].languages[0] + '</b>';
+            for (var j=1;j<data[i].languages.length;j++) {
+                projectLanguages.innerHTML = projectLanguages.innerHTML + ' | <b>' + data[i].languages[j] + '</b>';
+            }
         } else {
-            projectLanguages.textContent = "";
+            projectLanguages.innerHTML = '';
         }
+
 
         // Create the paragraph element to contain the list of tools utilized
         projectTools = document.createElement("p");
-        if (data[i].tools) {
-            projectTools.textContent = 'Tools Utilized: ' + data[i].tools;
+        if (data[i].tools[0]) {
+            projectTools.innerHTML = 'Tools Utilized: <b>' + data[i].tools[0] + '</b>';
+            for (var j=1;j<data[i].tools.length;j++) {
+                projectTools.innerHTML = projectTools.innerHTML + ' | <b>' + data[i].tools[j] + '</b>';
+            }
         } else {
-            projectTools.textContent = "";
+            projectTools.innerHTML = '';
         }
+
 
         // Create the paragraph element to contain the list of libraries utilized
         projectLibraries = document.createElement("p");
-        if (data[i].libraries) {
-            projectLibraries.textContent = 'Libraries Utilized: ' + data[i].libraries;
+        if (data[i].libraries[0]) {
+            projectLibraries.innerHTML = 'Libraries Utilized: <b>' + data[i].libraries[0] + '</b>';
+            for (var j=1;j<data[i].libraries.length;j++) {
+                projectLibraries.innerHTML = projectLibraries.innerHTML + ' | <b>' + data[i].libraries[j] + '</b>';
+            }
         } else {
-            projectLibraries.textContent = "";
+            projectLibraries.innerHTML = '';
         }
 
         //Append all new elements to the new div
         newDiv.append(anchor,projectDescription,projectLanguages,projectTools,projectLibraries);
 
         //Append the new div to the wrapper
-        parent.appendChild(newDiv);
+        parentWrapper.appendChild(newDiv);
     }
 }
 
