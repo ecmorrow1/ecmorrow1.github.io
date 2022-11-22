@@ -23,7 +23,7 @@ for (var i = 0; i < data.length; i++) {
         anchor.href = data[i].projectURL;
 
         // Create an h3 and h6 element to hold the project name and the description
-        anchor.innerHTML = '<h3>' + data[i].name + '</h3><h6>' + data[i].description + '</h6>';
+        anchor.innerHTML = '<br><h3>' + data[i].name + '</h3><h6>' + data[i].description + '</h6>';
         
         // Add the list of languages to the anchor if there are any
         if (data[i].languages[0]) {
@@ -35,7 +35,7 @@ for (var i = 0; i < data.length; i++) {
         
         // Add the list of tools to the anchor if there are any
         if (data[i].tools[0]) {
-            anchor.innerHTML = anchor.innerHTML + '<br><br>Tools Utilized: <b>' + data[i].tools[0] + '</b>';
+            anchor.innerHTML = anchor.innerHTML + '<br>Tools Utilized: <b>' + data[i].tools[0] + '</b>';
             for (var j=1;j<data[i].tools.length;j++) {
                 anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].tools[j] + '</b>';
             }
@@ -43,7 +43,7 @@ for (var i = 0; i < data.length; i++) {
         
         // Add the list of libraries to the anchor if there are any
         if (data[i].libraries[0]) {
-            anchor.innerHTML = anchor.innerHTML + '<br><br>Libraries Utilized: <b>' + data[i].libraries[0] + '</b>';
+            anchor.innerHTML = anchor.innerHTML + '<br>Libraries Utilized: <b>' + data[i].libraries[0] + '</b>';
             for (var j=1;j<data[i].libraries.length;j++) {
                 anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].libraries[j] + '</b>';
             }
