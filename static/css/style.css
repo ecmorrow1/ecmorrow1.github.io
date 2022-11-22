@@ -18,3 +18,11 @@ body {
     gap: 1px;
     grid-auto-rows: minmax(100px,auto);
 }
+
+h6 {
+    color:#000;
+}
+
+a {
+    color: #4267B2;
+}
