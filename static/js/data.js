@@ -107,7 +107,7 @@ var data = [{
     imageURL: "",
 },
 {
-    name: "Surf''s Up",
+    name: "Surf's Up",
     projectURL: "https://github.com/ecmorrow1/surfs-up",
     description: "Assessing weather data from Oahu to determine the viability of opening a surf and shake shop.",
     languages: ['Python'],
