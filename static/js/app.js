@@ -36,7 +36,7 @@ for (var i = 0; i < data.length; i++) {
         // Add the list of tools to the anchor if there are any
         if (data[i].tools[0]) {
             anchor.innerHTML = anchor.innerHTML + '<br><br>Tools Utilized: <b>' + data[i].tools[0] + '</b>';
-            for (var j=1;j<data[i].tools;j++) {
+            for (var j=1;j<data[i].tools.length;j++) {
                 anchor.innerHTML = anchor.innerHTML + ' | <b>' + data[i].tools[j] + '</b>';
             }
         }

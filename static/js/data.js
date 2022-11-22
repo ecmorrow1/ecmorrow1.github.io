@@ -39,7 +39,7 @@ var data = [{
     projectURL: "https://github.com/ecmorrow1/credit_risk_analysis",
     description: "Assessing which supervised ML model is optimized for assessing credit risk based on provided data.",
     languages: ['Python'],
-    tools: [''],
+    tools: ['Jupyter Notebook'],
     libraries: ['scikit-learn','numpy','pandas','collections','imblearn'],
     imageURL: "",
 },
