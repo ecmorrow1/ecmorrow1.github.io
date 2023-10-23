@@ -4,7 +4,7 @@ var data = [{
     description: "A scraping tool and data presentation tool for analyzing airline data to optimize trip planning for frequent trips.",
     languages: ['Python','JavaScript','HTML','CSS','PostgreSQL'],
     tools: ['Juptyer Notebook','AWS&nbspRDS','VS&nbspCode','pgAdmin'],
-    libraries: ['selenium','webdriver','regex','d3','plotly'],
+    libraries: ['flask','selenium','webdriver','regex','d3','plotly'],
     imageURL: "",
 },
 {
